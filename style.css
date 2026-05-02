@@ -1,0 +1,105 @@
+@charset "utf-8";
+/* CSS Document */
+
+header {
+	background-color:#333;
+}
+.logo {
+	position:absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width:auto;
+	height: 50px;
+	border:0;
+}
+.headline { 
+	padding-bottom:30px; 
+	color:#3399cc; 
+	font-family: "Fuzzy Bubbles", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size:clamp(1.8rem, 4.2vw, 3rem);
+}
+.blueberry .pager { margin-left:0!important; }
+h1.heading { font-size:clamp(1.8rem, 4.2vw, 2.5rem); }
+.icon {
+	width:80px;
+	height:80px;
+}
+.heading {
+	font-family: "Fuzzy Bubbles", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	color:#999; 
+	margin:40px 0px 25px 0px;
+}
+.title {
+	color:#006699;
+	font-size:30px;
+	margin:8px 0px;
+}
+.subtitle {
+	color:#3399cc;
+	font-size:21px;
+	font-weight:bold;
+	margin:8px 0px;
+}
+.topic {
+	margin-top:8px;
+}
+.small {
+	font-size:14px;
+	margin-top:8px;
+}
+.smallImg {
+	margin-top:10px;
+}
+.karate {
+	max-height:250px;
+	margin-bottom:16px;
+}
+.karateH {
+	max-width:240px;
+	margin-bottom:16px;
+}
+.caption {
+	font-size:14px;
+	text-align:center;
+	line-height:22px;
+	margin: 14px auto 18px auto;
+	padding: 0 8%;
+	max-width:350px;
+}
+footer {
+	font-size:14px; 
+	color:#999;
+	text-align:center; 
+	padding:10px;
+	margin-bottom:40px;
+	letter-spacing:0.5px;
+}
+
+/*CSS for photo gallery*/
+.photo-gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	gap: 12px;
+	}	
+
+.photo-gallery > div { width: calc(80%/4); padding:1% 2%; padding-bottom:0; margin: 0 2%; }		
+.photo-gallery img { width:95%; padding: 3%; border: 1px solid #ccc; }
+
+
+@media screen and (min-width: 761px) and (max-width: 1024px) {
+	.logo { width:14%; height:auto; }
+	.photo-gallery > div { padding: 0; margin: 0; }
+}	
+
+@media screen and (max-width: 760px) {
+	.logo { display:block; width:auto; height:42px; position: unset; transform: translateY(0); margin: 10px 0; margin-left:-10px; } 
+	.headline { padding: 0 5% 2%; }
+	.heading { margin: 25px 0 18px 0; }
+	.blueberry .pager { height:24px!important; }
+	.photo-gallery > div { width: calc(90%/2); padding: 0; margin: 0;  }
+}
