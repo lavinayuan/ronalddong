@@ -20,7 +20,7 @@ header {
 	font-style: normal;
 	font-size:clamp(1.8rem, 4.2vw, 3rem);
 }
-.blueberry .pager { margin-left:0!important; }
+
 h1.heading { font-size:clamp(1.8rem, 4.2vw, 2.5rem); }
 .icon {
 	width:80px;

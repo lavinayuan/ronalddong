@@ -12,7 +12,44 @@
     <link rel="stylesheet" href="blueberry.css" />
 	  <link rel="stylesheet" href="css/foundation.css" />    
     <script src="js/vendor/modernizr.js"></script>
-    
+
+    <style>
+      .slidershow { width:100%; overflow: hidden; position: relative; left: 50%; transform: translateX(-50%); margin-bottom: 42px; }
+      .navigation { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; }
+      .bar { width: 60px; height: 18px; border: 2px solid #fff; margin: 6px 12px; cursor: pointer; transition: 0.4s; }
+      .bar:hover { background: #fff; opacity: 0.6; }
+      input[name="radio-btn"] { position: absolute; visibility: hidden; }
+      .slides { width: 800%; height: 100%; display: flex; }
+      .slide { width: 12.5%; transition: 0.6s; display: block; }
+      .slide img { width: 100%; height: 100%; }
+
+      .slide-m { width: 12.5%; transition: 0.6s; display: none; }
+      .slide-m img { width: 100%; height: 100%; }
+
+      #radio1:checked ~ .s1 { margin-left: 0; }
+      #radio2:checked ~ .s1 { margin-left: -12.5%; }
+      #radio3:checked ~ .s1 { margin-left: -25%; }
+      #radio4:checked ~ .s1 { margin-left: -37.5%; }
+      #radio5:checked ~ .s1 { margin-left: -50%; }
+      #radio6:checked ~ .s1 { margin-left: -62.5%; }
+      #radio7:checked ~ .s1 { margin-left: -75%; }
+      #radio8:checked ~ .s1 { margin-left: -87.5%; }
+
+      @media screen and (min-width: 550px) and (max-width: 920px) {
+        .slidershow { margin-bottom: 30px; }
+        .bar { width: 48px; height: 16px; border: 2px solid #fff; margin: 6px 8px; }
+      }
+
+      @media screen and (max-width: 549px) {
+        .slidershow { margin-bottom: 24px; }  
+        .slide { display: none; }
+          .slide-m { display: block; }
+          .bar { width: 30px; height: 12px; margin: 0 4px; border: 1.5px solid #fff; }
+       }
+      
+
+    </style>
+
   </head>
   
 <body>
@@ -31,22 +68,83 @@
        </nav> 
        <a id="menu-icon" href="#">&#9776;</a>
      </header>
+
+    <div class="slidershow">
+      
+        <div class="slides">
+          <input type="radio" name="radio-btn" id="radio1" checked>
+          <input type="radio" name="radio-btn" id="radio2">
+          <input type="radio" name="radio-btn" id="radio3">
+          <input type="radio" name="radio-btn" id="radio4">
+          <input type="radio" name="radio-btn" id="radio5">
+          <input type="radio" name="radio-btn" id="radio6">
+          <input type="radio" name="radio-btn" id="radio7">
+          <input type="radio" name="radio-btn" id="radio8">
+
+          <div class="slide s1">
+            <img src="slides/2010.webp" alt="Fallen Leaves">
+          </div>
+          <div class="slide">
+            <img src="slides/2011.webp" alt="Summer">
+          </div>
+          <div class="slide">
+            <img src="slides/2011b.webp" alt="Ronald Santa">
+          </div>
+          <div class="slide">
+            <img src="slides/2012.webp" alt="San Marco 2012">
+          </div>
+          <div class="slide">
+            <img src="slides/2012b.webp" alt="Skating">
+          </div>
+          <div class="slide">
+            <img src="slides/2012c.webp" alt="Biking">
+          </div>
+          <div class="slide">
+            <img src="slides/2013.webp" alt="Skiing">
+          </div>
+          <div class="slide">
+            <img src="slides/2013b.webp" alt="Trevi Fountain Rome 2013">
+          </div>
+
+          <div class="slide-m s1">
+            <img src="slides/1100x600/2010.webp" alt="Fallen Leaves">
+          </div>
+          <div class="slide-m">
+            <img src="slides/1100x600/2011.webp" alt="Summer">
+          </div>
+          <div class="slide-m">
+            <img src="slides/1100x600/2011b.webp" alt="Ronald Santa">
+          </div>
+          <div class="slide-m">
+            <img src="slides/1100x600/2012.webp" alt="San Marco 2012">
+          </div>
+          <div class="slide-m">
+            <img src="slides/1100x600/2012b.webp" alt="Skating">
+          </div>
+          <div class="slide-m">
+            <img src="slides/1100x600/2012c.webp" alt="Biking">
+          </div>
+          <div class="slide-m">
+            <img src="slides/1100x600/2013.webp" alt="Skiing">
+          </div>
+          <div class="slide-m">
+            <img src="slides/1100x600/2013b.webp" alt="Trevi Fountain Rome 2013">
+          </div>
+        </div>
+
+        <div class="navigation">
+          <label for="radio1" class="bar"></label>
+          <label for="radio2" class="bar"></label>
+          <label for="radio3" class="bar"></label>
+          <label for="radio4" class="bar"></label>
+          <label for="radio5" class="bar"></label>
+          <label for="radio6" class="bar"></label>
+          <label for="radio7" class="bar"></label>
+          <label for="radio8" class="bar"></label>
+        </div>
     
-     
-    <div class="blueberry">
-      <ul class="slides">
-          <li><img src="slides/2010.webp" alt="Fallen Leaves"></li>
-          <li><img src="slides/2011.webp" alt="Summer"></li>
-          <li><img src="slides/2011b.webp" alt="Ronald Santa"></li>
-          <li><img src="slides/2012.webp" alt="San Marco 2012"></li>
-          <li><img src="slides/2012b.webp" alt="Skating"></li>
-          <li><img src="slides/2012c.webp" alt="Biking"></li>
-          <li><img src="slides/2013.webp" alt="Skiing"></li>
-          <li><img src="slides/2013b.webp" alt="Trevi Fountain Rome 2013"></li>
-      </ul>
     </div>
-    
-   
+  
   <div class="row" style="text-align:center;">
     <h1 class="headline">Can't believe Ronald is a big boy now!<hr></h1>
     <div class="medium-4 columns">
@@ -80,23 +178,63 @@
     </div> 
   </div>
        
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>	
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>	
 	<script type="text/javascript" src="custom.js"></script>
     
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/foundation.min.js"></script>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-	<script src="jquery.blueberry.js"></script>
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/foundation.min.js"></script>
 
-	<script>
-    $(window).load(function() {
-        $('.blueberry').blueberry();
+    
+  <!-- <script type="text/javascript">
+    var counter=1;
+    setInterval(function(){
+      document.getElementById('radio' + counter).checked=true;
+      counter++;
+      if(counter > 5){
+        counter = 1;
+      }
+    },5000);
+  </script>  -->
+  
+  <script>
+    let counter = 1;
+    const totalSlides = 8;
+    let slideTimer;
+
+    function showSlide(index) {
+      document.getElementById('radio' + index).checked = true;
+      counter = index;
+    }
+
+    function nextSlide() {
+      counter++;
+
+      if (counter > totalSlides) {
+        counter = 1;
+      }
+
+      showSlide(counter);
+
+      startAutoSlide();
+    }
+
+    function startAutoSlide() {
+      clearTimeout(slideTimer);
+
+      slideTimer = setTimeout(nextSlide, 3000);
+    }
+
+    // Manual navigation click
+    document.querySelectorAll('.bar').forEach((bar, index) => {
+      bar.addEventListener('click', () => {
+        showSlide(index + 1);
+        startAutoSlide(); // reset timer
+      });
     });
-    </script>
-	
-    
-    
+
+    // Start slideshow
+    startAutoSlide();
+  </script>
    
   </body>
 </html>
